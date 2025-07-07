@@ -1005,7 +1005,7 @@ function App() {
       <div className="absolute inset-0 flex items-center justify-start">
         <div className="relative w-3/5 h-full flex items-center justify-center opacity-20">
           <img 
-            src="src/assets/nami.png" 
+            src={nami} 
             alt="AI Technology Background" 
             className="w-full h-full max-w-4xl object-contain filter blur-sm"
           />
@@ -1025,7 +1025,7 @@ function App() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
               
               <img 
-                src="src/assets/nami.png" 
+                src={nami}
                 alt="AI Technology" 
                 className="relative w-80 h-80 lg:w-[450px] lg:h-[450px] object-contain drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
               />
