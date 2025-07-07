@@ -383,7 +383,7 @@ function App() {
         </svg>
       </div>
 
-      <style>{`
+      <style jsx>{`
         @keyframes ping {
           75%, 100% {
             transform: scale(2);
@@ -972,7 +972,7 @@ function App() {
           </motion.div>
         </div>
 
-        <style jsx>{`
+        <style>{`
           @keyframes scroll {
             0% {
               transform: translateX(0);
