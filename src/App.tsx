@@ -21,14 +21,13 @@ import nami from "./assets/nami.png";
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
-   const [ripples, setRipples] = useState([]);
   const sectionRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (sectionRef.current) {
-      const rect = sectionRef.current.getBoundingClientRect();
+      const rect = (sectionRef.current as HTMLDivElement).getBoundingClientRect();
       setMousePosition({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top
@@ -44,25 +43,25 @@ function App() {
     setIsHovering(false);
   };
 
-  const createRipple = (e) => {
-    const rect = sectionRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+  // const createRipple = (e) => {
+  //   const rect = sectionRef.current.getBoundingClientRect();
+  //   const x = e.clientX - rect.left;
+  //   const y = e.clientY - rect.top;
     
-    const newRipple = {
-      id: Date.now(),
-      x,
-      y,
-      size: 0,
-    };
+  //   const newRipple = {
+  //     id: Date.now(),
+  //     x,
+  //     y,
+  //     size: 0,
+  //   };
     
-    setRipples(prev => [...prev, newRipple]);
+  //   setRipples(prev => [...prev, newRipple]);
     
-    // Animate the ripple
-    setTimeout(() => {
-      setRipples(prev => prev.filter(ripple => ripple.id !== newRipple.id));
-    }, 1000);
-  };
+  //   // Animate the ripple
+  //   setTimeout(() => {
+  //     setRipples(prev => prev.filter(ripple => ripple.id !== newRipple.id));
+  //   }, 1000);
+  // };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -384,7 +383,7 @@ function App() {
         </svg>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes ping {
           75%, 100% {
             transform: scale(2);
