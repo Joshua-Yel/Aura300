@@ -17,6 +17,7 @@ import glassAsset from "./assets/glass-asset.png";
 import emma from "./assets/emma.png";
 import yuki from "./assets/yuki.png";
 import nami from "./assets/nami.png";
+import logodark from "./assets/logo-dark.png";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,6 +25,7 @@ function App() {
   const sectionRef = useRef(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
+  
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     if (sectionRef.current) {
@@ -193,13 +195,19 @@ function App() {
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <motion.div 
+            {/* Logo */}
+            <img 
+              src={logodark} 
+              alt="Aura300 Logo" 
+              className="h-12 w-auto"
+            />
+            {/* <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center"
             >
               <h1 className="text-2xl font-bold text-gradient">Aura300</h1>
-            </motion.div>
+            </motion.div> */}
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
@@ -406,279 +414,279 @@ function App() {
     </section>
 
       {/* Features Section */}
-<section id="Grow your business" className="relative py-16 bg-white overflow-hidden">
-  {/* Background Decorative Glass Image */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Floating AI Particles */}
-        <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-purple-300 rounded-full animate-bounce opacity-40"></div>
-        <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-500 rounded-full animate-pulse opacity-50"></div>
-        <div className="absolute bottom-20 right-10 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-30"></div>
-      </div>
+    <section id="Grow your business" className="relative py-16 bg-white overflow-hidden">
+      {/* Background Decorative Glass Image */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Floating AI Particles */}
+            <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
+            <div className="absolute top-40 right-20 w-3 h-3 bg-purple-300 rounded-full animate-bounce opacity-40"></div>
+            <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-500 rounded-full animate-pulse opacity-50"></div>
+            <div className="absolute bottom-20 right-10 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-30"></div>
+          </div>
 
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-  <svg className="absolute top-0 left-0 w-full h-full opacity-10">
-    <defs>
-      <linearGradient id="circuit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#8B5CF6" />
-        <stop offset="100%" stopColor="#EC4899" />
-      </linearGradient>
-    </defs>
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <svg className="absolute top-0 left-0 w-full h-full opacity-10">
+        <defs>
+          <linearGradient id="circuit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#8B5CF6" />
+            <stop offset="100%" stopColor="#EC4899" />
+          </linearGradient>
+        </defs>
 
-    {/* Top Left to Bottom Right */}
-    <path
-      d="M0,100 Q200,50 400,100 T800,100"
-      stroke="url(#circuit-gradient)"
-      strokeWidth="2"
-      fill="none"
-      className="animate-pulse"
-    />
-    <path
-      d="M0,200 Q300,150 600,200 T1200,200"
-      stroke="url(#circuit-gradient)"
-      strokeWidth="1"
-      fill="none"
-      className="animate-pulse"
-      style={{ animationDelay: '0.5s' }}
-    />
+        {/* Top Left to Bottom Right */}
+        <path
+          d="M0,100 Q200,50 400,100 T800,100"
+          stroke="url(#circuit-gradient)"
+          strokeWidth="2"
+          fill="none"
+          className="animate-pulse"
+        />
+        <path
+          d="M0,200 Q300,150 600,200 T1200,200"
+          stroke="url(#circuit-gradient)"
+          strokeWidth="1"
+          fill="none"
+          className="animate-pulse"
+          style={{ animationDelay: '0.5s' }}
+        />
 
-    {/* Bottom Left to Top Right (Flipped Curve) */}
-    <path
-      d="M0,600 Q300,550 600,600 T1200,600"
-      stroke="url(#circuit-gradient)"
-      strokeWidth="1"
-      fill="none"
-      className="animate-pulse"
-      style={{ animationDelay: '1s' }}
-    />
-    <path
-      d="M0,700 Q250,650 500,700 T1000,700"
-      stroke="url(#circuit-gradient)"
-      strokeWidth="1"
-      fill="none"
-      className="animate-pulse"
-      style={{ animationDelay: '1.5s' }}
-    />
+        {/* Bottom Left to Top Right (Flipped Curve) */}
+        <path
+          d="M0,600 Q300,550 600,600 T1200,600"
+          stroke="url(#circuit-gradient)"
+          strokeWidth="1"
+          fill="none"
+          className="animate-pulse"
+          style={{ animationDelay: '1s' }}
+        />
+        <path
+          d="M0,700 Q250,650 500,700 T1000,700"
+          stroke="url(#circuit-gradient)"
+          strokeWidth="1"
+          fill="none"
+          className="animate-pulse"
+          style={{ animationDelay: '1.5s' }}
+        />
 
-    {/* Diagonal from bottom-left to top-right */}
-    <path
-      d="M0,800 Q400,400 800,0"
-      stroke="url(#circuit-gradient)"
-      strokeWidth="1"
-      fill="none"
-      className="animate-pulse"
-      style={{ animationDelay: '2s' }}
-    />
+        {/* Diagonal from bottom-left to top-right */}
+        <path
+          d="M0,800 Q400,400 800,0"
+          stroke="url(#circuit-gradient)"
+          strokeWidth="1"
+          fill="none"
+          className="animate-pulse"
+          style={{ animationDelay: '2s' }}
+        />
 
-    {/* Diagonal from top-left to bottom-right */}
-    <path
-      d="M0,0 Q400,400 800,800"
-      stroke="url(#circuit-gradient)"
-      strokeWidth="1"
-      fill="none"
-      className="animate-pulse"
-      style={{ animationDelay: '2.5s' }}
-    />
-  </svg>
-</div>
+        {/* Diagonal from top-left to bottom-right */}
+        <path
+          d="M0,0 Q400,400 800,800"
+          stroke="url(#circuit-gradient)"
+          strokeWidth="1"
+          fill="none"
+          className="animate-pulse"
+          style={{ animationDelay: '2.5s' }}
+        />
+      </svg>
+    </div>
 
-  <img
-    src={glassAsset}
-    alt="Glass"
-    className="hidden sm:block absolute top-0 left-[-100px] w-94 opacity-90 z-0 pointer-events-none"
-  />
+      <img
+        src={glassAsset}
+        alt="Glass"
+        className="hidden sm:block absolute top-0 left-[-100px] w-94 opacity-90 z-0 pointer-events-none"
+      />
 
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      {/* Left Column - Text */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <h2 className="text-4xl md:text-5xl font-regular text-gray-900 mb-6 leading-tight">
-          Supercharge your <br /> Salon Growth
-        </h2>
-        <p className="text-lg text-gray-700 max-w-md">
-          Aura 300 isn't just an AI receptionist — it's your <br />
-          new business partner, working day and night to:
-        </p>
-      </motion.div>
-
-      {/* Right Column - Features List */}
-      <div className="space-y-6">
-        {features.map((feature, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text */}
           <motion.div
-            key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            whileHover={{
-              scale: 1.03,
-              boxShadow: ' 0 8px 24px rgba(174,110,231,0.4)',
-            }}
-            className="bg-purple-100/60 backdrop-blur-md border border-purple-200 rounded-[30px] p-6 shadow-[0_0_20px_rgba(168, 85, 247, 0.4) ] transition-all duration-300 ease-in-out cursor-pointer hover:shadow-[0_12px_32px_rgba(174,110,231,0.5)]"
           >
-            <h3 className="text-lg font-semibold text-gray-900">
-              {feature.title}
-            </h3>
-            <p className="text-sm text-gray-700">{feature.description}</p>
+            <h2 className="text-4xl md:text-5xl font-regular text-gray-900 mb-6 leading-tight">
+              Supercharge your <br /> Salon Growth
+            </h2>
+            <p className="text-lg text-gray-700 max-w-md">
+              Aura 300 isn't just an AI receptionist — it's your <br />
+              new business partner, working day and night to:
+            </p>
           </motion.div>
-        ))}
+
+          {/* Right Column - Features List */}
+          <div className="space-y-6">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{
+                  scale: 1.03,
+                  boxShadow: ' 0 8px 24px rgba(174,110,231,0.4)',
+                }}
+                className="bg-purple-100/60 backdrop-blur-md border border-purple-200 rounded-[30px] p-6 shadow-[0_0_20px_rgba(168, 85, 247, 0.4) ] transition-all duration-300 ease-in-out cursor-pointer hover:shadow-[0_12px_32px_rgba(174,110,231,0.5)]"
+              >
+                <h3 className="text-lg font-semibold text-gray-900">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-gray-700">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
      {/* How It Works Section */}
-<section className="py-20 gradient-bg relative overflow-hidden">
-  {/* Animated background elements */}
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
-    <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
-  </div>
-  
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <div className="bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl p-10 md:p-16 border border-white/20 relative overflow-hidden">
-      {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-blue-50/50 rounded-3xl"></div>
+    <section className="py-20 gradient-bg relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+      </div>
       
-      <div className="relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full text-purple-700 font-medium text-sm mb-6">
-            <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
-            AI-Powered Salon Management
-          </div>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900 bg-clip-text text-transparent mb-6">
-            How Aura 300 Works
-          </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Meet your AI-powered dream team. Three specialized agents working 24/7 to transform your salon into a client-attracting, revenue-generating powerhouse.
-          </p>
-        </motion.div>
-
-        {/* Process Flow */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <div className="flex justify-center items-center space-x-8 mb-12">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
-              <span className="text-gray-700 font-medium">Setup & Integration</span>
-            </div>
-            <div className="w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
-              <span className="text-gray-700 font-medium">AI Agents Activate</span>
-            </div>
-            <div className="w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
-              <span className="text-gray-700 font-medium">Results & Growth</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Agent Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {[
-            {
-              src: emma,
-              name: "Emma",
-              role: "AI Receptionist",
-              description: "Never miss a call again. Emma handles appointment bookings, rescheduling, and customer inquiries with human-like conversation.",
-              features: ["24/7 availability", "Instant booking", "Multi-language support"],
-              color: "from-pink-500 to-rose-500",
-              bgColor: "from-pink-50 to-rose-50"
-            },
-            {
-              src: yuki,
-              name: "Yuki",
-              role: "AI Sales Manager",
-              description: "Transform lost clients into loyal customers. Yuki re-engages dormant clients with personalized outreach and irresistible offers.",
-              features: ["Client retention", "Personalized campaigns", "Smart follow-ups"],
-              color: "from-purple-500 to-indigo-500",
-              bgColor: "from-purple-50 to-indigo-50"
-            },
-            {
-              src: nami,
-              name: "Nami",
-              role: "AI Marketing Expert",
-              description: "Attract new clients effortlessly. Nami creates, launches, and optimizes targeted ad campaigns that actually convert.",
-              features: ["Smart targeting", "A/B testing", "ROI optimization"],
-              color: "from-blue-500 to-cyan-500",
-              bgColor: "from-blue-50 to-cyan-50"
-            }
-          ].map((agent, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl p-10 md:p-16 border border-white/20 relative overflow-hidden">
+          {/* Subtle gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-blue-50/50 rounded-3xl"></div>
+          
+          <div className="relative z-10">
             <motion.div
-              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="group"
+              className="text-center mb-20"
             >
-              <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
-                {/* Card background gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${agent.bgColor} opacity-0 group-hover:opacity-30 transition-opacity duration-300`}></div>
-                
-                <div className="relative z-10">
-                  {/* Agent Avatar */}
-                  <div className="relative mb-6">
-                    <div className={`w-24 h-24 bg-gradient-to-r ${agent.color} rounded-2xl flex items-center justify-center mx-auto shadow-lg`}>
-                      <img
-                        src={agent.src}
-                        alt={agent.name}
-                        className="w-16 h-16 rounded-xl object-cover"
-                      />
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full text-purple-700 font-medium text-sm mb-6">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+                AI-Powered Salon Management
+              </div>
+              <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-purple-900 to-blue-900 bg-clip-text text-transparent mb-6">
+                How Aura 300 Works
+              </h2>
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                Meet your AI-powered dream team. Three specialized agents working 24/7 to transform your salon into a client-attracting, revenue-generating powerhouse.
+              </p>
+            </motion.div>
 
-                  {/* Agent Info */}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{agent.name}</h3>
-                    <p className={`text-transparent bg-gradient-to-r ${agent.color} bg-clip-text font-semibold mb-4`}>
-                      {agent.role}
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">{agent.description}</p>
-                  </div>
-
-                  {/* Features */}
-                  <div className="space-y-2">
-                    {agent.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-500">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${agent.color} rounded-full mr-3`}></div>
-                        {feature}
-                      </div>
-                    ))}
-                  </div>
+            {/* Process Flow */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <div className="flex justify-center items-center space-x-8 mb-12">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
+                  <span className="text-gray-700 font-medium">Setup & Integration</span>
+                </div>
+                <div className="w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
+                  <span className="text-gray-700 font-medium">AI Agents Activate</span>
+                </div>
+                <div className="w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
+                  <span className="text-gray-700 font-medium">Results & Growth</span>
                 </div>
               </div>
             </motion.div>
-          ))}
-        </div>
 
-       
+            {/* Agent Cards */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  src: emma,
+                  name: "Emma",
+                  role: "AI Receptionist",
+                  description: "Never miss a call again. Emma handles appointment bookings, rescheduling, and customer inquiries with human-like conversation.",
+                  features: ["24/7 availability", "Instant booking", "Multi-language support"],
+                  color: "from-pink-500 to-rose-500",
+                  bgColor: "from-pink-50 to-rose-50"
+                },
+                {
+                  src: yuki,
+                  name: "Yuki",
+                  role: "AI Sales Manager",
+                  description: "Transform lost clients into loyal customers. Yuki re-engages dormant clients with personalized outreach and irresistible offers.",
+                  features: ["Client retention", "Personalized campaigns", "Smart follow-ups"],
+                  color: "from-purple-500 to-indigo-500",
+                  bgColor: "from-purple-50 to-indigo-50"
+                },
+                {
+                  src: nami,
+                  name: "Nami",
+                  role: "AI Marketing Expert",
+                  description: "Attract new clients effortlessly. Nami creates, launches, and optimizes targeted ad campaigns that actually convert.",
+                  features: ["Smart targeting", "A/B testing", "ROI optimization"],
+                  color: "from-blue-500 to-cyan-500",
+                  bgColor: "from-blue-50 to-cyan-50"
+                }
+              ].map((agent, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <div className="relative bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden">
+                    {/* Card background gradient */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${agent.bgColor} opacity-0 group-hover:opacity-30 transition-opacity duration-300`}></div>
+                    
+                    <div className="relative z-10">
+                      {/* Agent Avatar */}
+                      <div className="relative mb-6">
+                        <div className={`w-24 h-24 bg-gradient-to-r ${agent.color} rounded-2xl flex items-center justify-center mx-auto shadow-lg`}>
+                          <img
+                            src={agent.src}
+                            alt={agent.name}
+                            className="w-16 h-16 rounded-xl object-cover"
+                          />
+                        </div>
+                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                          <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                        </div>
+                      </div>
+
+                      {/* Agent Info */}
+                      <div className="text-center mb-6">
+                        <h3 className="text-2xl font-bold text-gray-900 mb-2">{agent.name}</h3>
+                        <p className={`text-transparent bg-gradient-to-r ${agent.color} bg-clip-text font-semibold mb-4`}>
+                          {agent.role}
+                        </p>
+                        <p className="text-gray-600 leading-relaxed">{agent.description}</p>
+                      </div>
+
+                      {/* Features */}
+                      <div className="space-y-2">
+                        {agent.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-center text-sm text-gray-500">
+                            <div className={`w-2 h-2 bg-gradient-to-r ${agent.color} rounded-full mr-3`}></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+          
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -724,7 +732,7 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 gradient-bg">
+      {/* <section id="pricing" className="py-16 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -780,7 +788,7 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Section */}
       <section id="Why Choose us" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
@@ -991,6 +999,100 @@ function App() {
           }
         `}</style>
       </section>
+
+      {/* Book your Free DEmo */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50 overflow-hidden">
+      {/* Large Background Image */}
+      <div className="absolute inset-0 flex items-center justify-start">
+        <div className="relative w-3/5 h-full flex items-center justify-center opacity-20">
+          <img 
+            src="src/assets/nami.png" 
+            alt="AI Technology Background" 
+            className="w-full h-full max-w-4xl object-contain filter blur-sm"
+          />
+        </div>
+      </div>
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/80 to-white/90"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          
+          {/* Left Side - 3D Asset (Foreground) */}
+          <div className="relative flex justify-center lg:justify-start">
+            <div className="relative group">
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-400/20 rounded-full blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+              
+              <img 
+                src="src/assets/nami.png" 
+                alt="AI Technology" 
+                className="relative w-80 h-80 lg:w-[450px] lg:h-[450px] object-contain drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+          </div>
+
+          {/* Right Side - Content */}
+          <div className="text-center lg:text-left space-y-8">
+            
+            {/* Header */}
+            <div className="space-y-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Book your{' '}
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  free demo
+                </span>
+              </h1>
+              
+              <p className="text-xl lg:text-2xl text-gray-600 max-w-xl leading-relaxed">
+                See how Aura 300 can maximize your revenues
+              </p>
+            </div>
+
+            {/* Features */}
+            <div className="space-y-4">
+              <div className="group p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200/60 shadow-sm hover:shadow-lg hover:border-purple-300/80 transition-all duration-300">
+                <div className="text-lg font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">
+                  30-minute live demo
+                </div>
+              </div>
+              
+              <div className="group p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200/60 shadow-sm hover:shadow-lg hover:border-purple-300/80 transition-all duration-300">
+                <div className="text-lg font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">
+                  Personalized growth plan
+                </div>
+              </div>
+              
+              <div className="group p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-200/60 shadow-sm hover:shadow-lg hover:border-purple-300/80 transition-all duration-300">
+                <div className="text-lg font-semibold text-gray-800 group-hover:text-purple-700 transition-colors">
+                  Special early-adopter bonuses
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="space-y-8">
+              <div className="text-center lg:text-left">
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-3">
+                  Don't Let Another Client Go Unanswered.
+                </h2>
+                <p className="text-lg lg:text-xl text-gray-600">
+                  Let's Grow Together.
+                </p>
+              </div>
+              
+              <button className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 transform">
+                <div className="flex items-center justify-center space-x-3">
+                  <Calendar className="w-6 h-6" />
+                  <span>Book your free demo</span>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-16 gradient-bg">
