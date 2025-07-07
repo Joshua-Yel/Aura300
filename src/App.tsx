@@ -575,29 +575,42 @@ function App() {
 
             {/* Process Flow */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="mb-16"
-            >
-              <div className="flex justify-center items-center space-x-8 mb-12">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">1</div>
-                  <span className="text-gray-700 font-medium">Setup & Integration</span>
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <div className="flex flex-col sm:flex-row justify-center items-center space-y-8 sm:space-y-0 sm:space-x-8 mb-12">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      1
+                    </div>
+                    <span className="text-gray-700 font-medium">Setup & Integration</span>
+                  </div>
+
+                  {/* Line separator for desktop */}
+                  <div className="hidden sm:block w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
+
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      2
+                    </div>
+                    <span className="text-gray-700 font-medium">AI Agents Activate</span>
+                  </div>
+
+                  {/* Line separator for desktop */}
+                  <div className="hidden sm:block w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
+
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      3
+                    </div>
+                    <span className="text-gray-700 font-medium">Results & Growth</span>
+                  </div>
                 </div>
-                <div className="w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">2</div>
-                  <span className="text-gray-700 font-medium">AI Agents Activate</span>
-                </div>
-                <div className="w-8 h-px bg-gradient-to-r from-purple-300 to-blue-300"></div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">3</div>
-                  <span className="text-gray-700 font-medium">Results & Growth</span>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+
 
             {/* Agent Cards */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -1195,7 +1208,7 @@ function App() {
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>Features</li>
-                <li>Pricing</li>
+                {/* <li>Pricing</li> */}
                 <li>Demo</li>
               </ul>
             </div>
