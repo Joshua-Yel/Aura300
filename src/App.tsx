@@ -10,7 +10,6 @@ import {
   Star,
   Menu,
   X,
-  Check
 } from 'lucide-react'
 
 import glassAsset from "./assets/glass-asset.png"; 
@@ -148,46 +147,46 @@ function App() {
     }
   ]
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "month",
-      features: [
-        "AI Receptionist",
-        "Basic Call Handling",
-        "Appointment Booking",
-        "Email Support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$199",
-      period: "month",
-      features: [
-        "Everything in Starter",
-        "Multi-channel Messaging",
-        "Client Re-engagement",
-        "Marketing Campaigns",
-        "Priority Support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$299",
-      period: "month",
-      features: [
-        "Everything in Professional",
-        "Custom AI Training",
-        "Advanced Analytics",
-        "Dedicated Support",
-        "API Access"
-      ],
-      popular: false
-    }
-  ]
+  // const pricingPlans = [
+  //   {
+  //     name: "Starter",
+  //     price: "$99",
+  //     period: "month",
+  //     features: [
+  //       "AI Receptionist",
+  //       "Basic Call Handling",
+  //       "Appointment Booking",
+  //       "Email Support"
+  //     ],
+  //     popular: false
+  //   },
+  //   {
+  //     name: "Professional",
+  //     price: "$199",
+  //     period: "month",
+  //     features: [
+  //       "Everything in Starter",
+  //       "Multi-channel Messaging",
+  //       "Client Re-engagement",
+  //       "Marketing Campaigns",
+  //       "Priority Support"
+  //     ],
+  //     popular: true
+  //   },
+  //   {
+  //     name: "Enterprise",
+  //     price: "$299",
+  //     period: "month",
+  //     features: [
+  //       "Everything in Professional",
+  //       "Custom AI Training",
+  //       "Advanced Analytics",
+  //       "Dedicated Support",
+  //       "API Access"
+  //     ],
+  //     popular: false
+  //   }
+  // ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
