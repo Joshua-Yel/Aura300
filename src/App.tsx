@@ -210,7 +210,7 @@ function App() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              {['Salon Growth', 'How it Works', 'Grow your business', 'Why Us', 'Contact'].map((section) => (
+              {['Salon Growth', 'How it Works', 'Grow your business', 'Why us', 'Contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -541,7 +541,7 @@ function App() {
 
 
      {/* How It Works Section */}
-    <section className="py-20 gradient-bg relative overflow-hidden">
+    <section id="How it Works" className="py-20 gradient-bg relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse"></div>
@@ -658,11 +658,11 @@ function App() {
                     <div className="relative z-10">
                       {/* Agent Avatar */}
                       <div className="relative mb-6">
-                        <div className={`w-24 h-24 bg-gradient-to-r ${agent.color} rounded-2xl flex items-center justify-center mx-auto shadow-lg`}>
+                        <div className={`w-46 h-46 bg-gradient-to-r ${agent.color} rounded-full flex items-center justify-center mx-auto shadow-lg`}>
                           <img
                             src={agent.src}
                             alt={agent.name}
-                            className="w-16 h-16 rounded-xl object-cover"
+                            className="w-44 h-44 rounded-xl object-cover"
                           />
                         </div>
                         <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
@@ -803,7 +803,7 @@ function App() {
       </section> */}
 
       {/* About Section */}
-      <section id="Why Choose us" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section id="Why us" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-purple-200/30 to-blue-200/30 rounded-full blur-3xl animate-pulse"></div>
@@ -1107,7 +1107,7 @@ function App() {
     </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 gradient-bg">
+      <section id="Contact" className="py-16 gradient-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
