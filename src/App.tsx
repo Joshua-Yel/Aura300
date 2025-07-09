@@ -1107,7 +1107,7 @@ function App() {
               
               <button className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 transform"
               
-                onClick={() => window.location.href = "https://calendly.com/aura300/demo"}
+                onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}
               >
                 <div className="flex items-center justify-center space-x-3">
                   <Calendar className="w-6 h-6" />
@@ -1203,7 +1203,7 @@ function App() {
                 
                   onClick={(e) => {
                     e.preventDefault();
-                    window.location.href = "https://calendly.com/aura300/demo";
+                    window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07";
                   }}
                 >
                   Book Demo
