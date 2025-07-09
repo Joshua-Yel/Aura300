@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 
 import glassAsset from "./assets/glass-asset.png"; 
+import glassAsset2 from "./assets/glass-asset-2.png";
 import emma from "./assets/emma.png";
 import yuki from "./assets/yuki.png";
 import nami from "./assets/nami.png";
@@ -229,6 +230,7 @@ function App() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               className="btn-primary hidden md:block"
+              onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}
             >
               Book Demo
             </motion.button>
@@ -260,7 +262,8 @@ function App() {
                     {section}
                   </button>
                 ))}
-                <button className="btn-primary w-full mt-4">
+                <button className="btn-primary w-full mt-4" 
+                  onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}>
                   Book Demo
                 </button>
               </div>
@@ -328,7 +331,8 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <button className="relative group bg-white text-black text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 overflow-hidden border-2 border-purple-600">
               {/* Button Text */}
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-white">
+              <span className="relative z-10 transition-colors duration-300 group-hover:text-white" 
+                onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}>
                 Book your free Demo
               </span>
 
@@ -490,9 +494,9 @@ function App() {
     </div>
 
       <img
-        src={glassAsset}
+        src={glassAsset2}
         alt="Glass"
-        className="hidden sm:block absolute top-0 left-[-100px] w-94 opacity-90 z-0 pointer-events-none"
+        className="hidden sm:block absolute top-0 left-[-117px] w-109 opacity-90 z-0 pointer-events-none"
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -537,6 +541,12 @@ function App() {
           </div>
         </div>
       </div>
+
+      {/* Floating Glass Image */}
+      <img
+        src={glassAsset}
+        alt="Glass"
+        className="hidden sm:block absolute bottom-0 right-[-117px] w-109 opacity-90 z-0 pointer-events-none"></img>
     </section>
 
 
@@ -549,7 +559,7 @@ function App() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="bg-white/95 backdrop-blur-xl shadow-2xl rounded-3xl p-10 md:p-16 border border-white/20 relative overflow-hidden">
+        <div className="bg-[#E9D5FF99] backdrop-blur-xl shadow-2xl rounded-3xl p-10 md:p-16 border border-white/20 relative overflow-hidden">
           {/* Subtle gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 to-blue-50/50 rounded-3xl"></div>
           
@@ -1094,10 +1104,13 @@ function App() {
                 </p>
               </div>
               
-              <button className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 transform">
+              <button className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 transform"
+              
+                onClick={() => window.location.href = "https://calendly.com/aura300/demo"}
+              >
                 <div className="flex items-center justify-center space-x-3">
                   <Calendar className="w-6 h-6" />
-                  <span>Book your free demo</span>
+                  <span >Book your free demo</span>
                 </div>
               </button>
             </div>
@@ -1185,7 +1198,13 @@ function App() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn-primary w-full">
+                <button type="submit" className="btn-primary w-full"
+                
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.location.href = "https://calendly.com/aura300/demo";
+                  }}
+                >
                   Book Demo
                 </button>
               </form>
