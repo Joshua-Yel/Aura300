@@ -492,15 +492,15 @@ function App() {
         />
       </svg>
     </div>
-
-      <img
+    <div className='relative'>
+<img
         src={glassAsset2}
         alt="Glass"
-        className="hidden sm:block absolute top-0 left-[-117px] w-109 opacity-90 z-0 pointer-events-none"
+          className="hidden sm:block absolute top-0 left-[-117px] w-109 opacity-90 z-[1] pointer-events-none"
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="z-20 relative  max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="z-20 relative  grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -508,7 +508,7 @@ function App() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-regular text-gray-900 mb-6 leading-tight">
+            <h2 className="z-20 text-4xl md:text-5xl font-regular text-gray-900 mb-6 leading-tight">
               Supercharge your <br /> Salon Growth
             </h2>
             <p className="text-lg text-gray-700 max-w-md">
@@ -546,7 +546,8 @@ function App() {
       <img
         src={glassAsset}
         alt="Glass"
-        className="hidden sm:block absolute bottom-0 right-[-117px] w-109 opacity-90 z-0 pointer-events-none"></img>
+        className="hidden sm:block absolute bottom-0 right-[-117px] w-109 opacity-90 z-1 pointer-events-none"></img>
+    </div>
     </section>
 
 
@@ -979,7 +980,7 @@ function App() {
           </motion.div>
 
           {/* Bottom CTA */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -999,7 +1000,7 @@ function App() {
               </div>
               <span className="text-gray-500">+500 happy salon owners</span>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         <style>{`
