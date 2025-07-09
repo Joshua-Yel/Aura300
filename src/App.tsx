@@ -127,26 +127,26 @@ function App() {
     }
   ]
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Salon Owner",
-      content: "Aura 300 filled our white space and grew revenue by 27% in just 60 days!",
-      rating: 5
-    },
-    {
-      name: "Mike Chen",
-      role: "Hair Stylist",
-      content: "The AI receptionist never misses a call and books appointments instantly.",
-      rating: 5
-    },
-    {
-      name: "Emma Davis",
-      role: "Beauty Salon Manager",
-      content: "Our client re-engagement has increased dramatically since using Aura 300.",
-      rating: 5
-    }
-  ]
+  // const testimonials = [
+  //   {
+  //     name: "Sarah Johnson",
+  //     role: "Salon Owner",
+  //     content: "Aura 300 filled our white space and grew revenue by 27% in just 60 days!",
+  //     rating: 5
+  //   },
+  //   {
+  //     name: "Mike Chen",
+  //     role: "Hair Stylist",
+  //     content: "The AI receptionist never misses a call and books appointments instantly.",
+  //     rating: 5
+  //   },
+  //   {
+  //     name: "Emma Davis",
+  //     role: "Beauty Salon Manager",
+  //     content: "Our client re-engagement has increased dramatically since using Aura 300.",
+  //     rating: 5
+  //   }
+  // ]
 
   // const pricingPlans = [
   //   {
@@ -210,8 +210,8 @@ function App() {
             </motion.div> */}
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
-              {['Salon Growth', 'How it Works', 'Grow your business', 'Why us', 'Contact'].map((section) => (
+            <div className="hidden md:flex space-x-10">
+              {['Salon Growth', 'Grow your business', 'How it Works', 'Why us', 'Contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -273,148 +273,149 @@ function App() {
       </nav>
 
       {/* Hero Section */}
-    <section 
-      ref={sectionRef}
-      id="Salon Growth" 
-      className="relative pt-20 pb-16 h-[949px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(225,190,255,1)_0%,rgba(255,255,255,1)_100%)] flex flex-col items-center justify-center overflow-hidden"
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Floating AI Particles */}
-        <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-purple-300 rounded-full animate-bounce opacity-40"></div>
-        <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-500 rounded-full animate-pulse opacity-50"></div>
-        <div className="absolute bottom-20 right-10 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-30"></div>
-      </div>
-
-      {/* Interactive Ripple Effect */}
-      {isHovering && (
-        <div 
-          className="absolute pointer-events-none"
-          style={{
-            left: mousePosition.x - 50,
-            top: mousePosition.y - 50,
-            width: '100px',
-            height: '100px',
-          }}
-        >
-          <div className="absolute inset-0 rounded-full bg-purple-500 opacity-20 animate-ping"></div>
-          <div className="absolute inset-2 rounded-full bg-purple-400 opacity-30 animate-ping animation-delay-75"></div>
-          <div className="absolute inset-4 rounded-full bg-purple-300 opacity-40 animate-ping animation-delay-150"></div>
+      <section 
+        ref={sectionRef}
+        id="Salon Growth" 
+        className="relative pt-20 pb-16 h-[949px] [background:radial-gradient(50%_50%_at_50%_50%,rgba(225,190,255,1)_0%,rgba(255,255,255,1)_100%)] flex flex-col items-center justify-center overflow-hidden"
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 pointer-events-none">
+          {/* Floating AI Particles */}
+          <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-pulse opacity-60"></div>
+          <div className="absolute top-40 right-20 w-3 h-3 bg-purple-300 rounded-full animate-bounce opacity-40"></div>
+          <div className="absolute bottom-40 left-20 w-2 h-2 bg-purple-500 rounded-full animate-pulse opacity-50"></div>
+          <div className="absolute bottom-20 right-10 w-3 h-3 bg-purple-400 rounded-full animate-bounce opacity-30"></div>
         </div>
-      )}
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
-          <h1
-            className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 relative group transition-all duration-500 hover:scale-105"
+        {/* Interactive Ripple Effect */}
+        {isHovering && (
+          <div 
+            className="absolute pointer-events-none"
+            style={{
+              left: mousePosition.x - 50,
+              top: mousePosition.y - 50,
+              width: '100px',
+              height: '100px',
+            }}
           >
-            <span className="relative inline-block">
-              The AI Growth Engine for{' '}
-              <span className="text-gradient bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                Salons
-              </span>
-              
-              {/* Animated underline on hover */}
-              <div className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-purple-600 to-pink-500 transition-all duration-700 group-hover:w-full rounded-full shadow-lg shadow-purple-500/50"></div>
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto transition-all duration-300 hover:text-gray-700">
-            Turn missed calls, lapsed clients, and empty chairs into real revenue — 24/7.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <button className="relative group bg-white text-black text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 overflow-hidden border-2 border-purple-600">
-              {/* Button Text */}
-              <span className="relative z-10 transition-colors duration-300 group-hover:text-white" 
-                onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}>
-                Book your free Demo
-              </span>
-
-              {/* Animated gradient background growing from center */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-center z-0"></div>
-
-              {/* Optional ripple effect */}
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 group-hover:animate-ping rounded-full z-0"></div>
-            </button>
-
+            <div className="absolute inset-0 rounded-full bg-purple-500 opacity-20 animate-ping"></div>
+            <div className="absolute inset-2 rounded-full bg-purple-400 opacity-30 animate-ping animation-delay-75"></div>
+            <div className="absolute inset-4 rounded-full bg-purple-300 opacity-40 animate-ping animation-delay-150"></div>
           </div>
+        )}
 
-          <div className="mt-12">
-            <p className="text-gray-500 mb-4 transition-all duration-300 hover:text-gray-600">
-              Built By Salon Experts. Trusted By Growing Salons.
+        {/* Main Content */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center">
+            <h1
+              className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 relative group transition-all duration-500 hover:scale-105"
+            >
+              <span className="relative inline-block">
+                The AI Growth Engine for{' '}
+                <span className="text-gradient bg-gradient-to-r from-purple-600 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                  Salons
+                </span>
+                
+                {/* Animated underline on hover */}
+                <div className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-purple-600 to-pink-500 transition-all duration-700 group-hover:w-full rounded-full shadow-lg shadow-purple-500/50"></div>
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto transition-all duration-300 hover:text-gray-700">
+              Turn missed calls, lapsed clients, and empty chairs into real revenue — 24/7.
             </p>
-            <div className="flex justify-center items-center space-x-8 text-gray-400">
-              <span className="relative group cursor-pointer transition-all duration-300 hover:text-purple-600">
-                ✓ 24/7 AI Support
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></div>
-              </span>
-              <span className="relative group cursor-pointer transition-all duration-300 hover:text-purple-600">
-                ✓ Proven Revenue Growth
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></div>
-              </span>
-              <span className="relative group cursor-pointer transition-all duration-300 hover:text-purple-600">
-                ✓ Salon Industry Experts
-                <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></div>
-              </span>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <button className="relative group bg-white text-black text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 overflow-hidden border-2 border-purple-600">
+                {/* Button Text */}
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-white" 
+                  onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}>
+                  Book your free Demo
+                </span>
+
+                {/* Animated gradient background growing from center */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full transform scale-0 group-hover:scale-100 transition-transform duration-300 origin-center z-0"></div>
+
+                {/* Optional ripple effect */}
+                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 group-hover:animate-ping rounded-full z-0"></div>
+              </button>
+
+            </div>
+
+            <div className="mt-12">
+              <p className="text-gray-500 mb-4 transition-all duration-300 hover:text-gray-600">
+                Built By Salon Experts. Trusted By Growing Salons.
+              </p>
+              <div className="flex justify-center items-center space-x-8 text-gray-400">
+                <span className="relative group cursor-pointer transition-all duration-300 hover:text-purple-600">
+                  ✓ 24/7 AI Support
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></div>
+                </span>
+                <span className="relative group cursor-pointer transition-all duration-300 hover:text-purple-600">
+                  ✓ Proven Revenue Growth
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></div>
+                </span>
+                <span className="relative group cursor-pointer transition-all duration-300 hover:text-purple-600">
+                  ✓ Salon Industry Experts
+                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-purple-600 transition-all duration-300 group-hover:w-full"></div>
+                </span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Floating AI Circuit Lines */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <svg className="absolute top-0 left-0 w-full h-full opacity-10">
-          <defs>
-            <linearGradient id="circuit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#8B5CF6" />
-              <stop offset="100%" stopColor="#EC4899" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0,100 Q200,50 400,100 T800,100"
-            stroke="url(#circuit-gradient)"
-            strokeWidth="2"
-            fill="none"
-            className="animate-pulse"
-          />
-          <path
-            d="M0,200 Q300,150 600,200 T1200,200"
-            stroke="url(#circuit-gradient)"
-            strokeWidth="1"
-            fill="none"
-            className="animate-pulse"
-            style={{ animationDelay: '0.5s' }}
-          />
-        </svg>
-      </div>
+        {/* Floating AI Circuit Lines */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <svg className="absolute top-0 left-0 w-full h-full opacity-10">
+            <defs>
+              <linearGradient id="circuit-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8B5CF6" />
+                <stop offset="100%" stopColor="#EC4899" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M0,100 Q200,50 400,100 T800,100"
+              stroke="url(#circuit-gradient)"
+              strokeWidth="2"
+              fill="none"
+              className="animate-pulse"
+            />
+            <path
+              d="M0,200 Q300,150 600,200 T1200,200"
+              stroke="url(#circuit-gradient)"
+              strokeWidth="1"
+              fill="none"
+              className="animate-pulse"
+              style={{ animationDelay: '0.5s' }}
+            />
+          </svg>
+        </div>
 
-      <style>{`
-        @keyframes ping {
-          75%, 100% {
-            transform: scale(2);
-            opacity: 0;
+        <style>{`
+          @keyframes ping {
+            75%, 100% {
+              transform: scale(2);
+              opacity: 0;
+            }
           }
-        }
-        .animation-delay-75 {
-          animation-delay: 0.075s;
-        }
-        .animation-delay-150 {
-          animation-delay: 0.15s;
-        }
-        .text-gradient {
-          background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-        }
-      `}</style>
-    </section>
+          .animation-delay-75 {
+            animation-delay: 0.075s;
+          }
+          .animation-delay-150 {
+            animation-delay: 0.15s;
+          }
+          .text-gradient {
+            background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+          }
+        `}</style>
+      </section>
 
       {/* Features Section */}
     <section id="Grow your business" className="relative py-16 bg-white overflow-hidden">
@@ -714,7 +715,7 @@ function App() {
 
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -752,7 +753,7 @@ function App() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Pricing Section */}
       {/* <section id="pricing" className="py-16 gradient-bg">
@@ -886,42 +887,42 @@ function App() {
                     title: "Built for Salons",
                     description: "First AI built exclusively for salons (not a generic bot)",
                     icon: "✨",
-                    color: "from-pink-500 to-rose-500",
+                    color: "from-pink-300 to-rose-300",
                     bgColor: "from-pink-50 to-rose-50"
                   },
                   {
                     title: "Industry Expertise",
                     description: "Created by salon owners who understand the industry",
                     icon: "👑",
-                    color: "from-purple-500 to-indigo-500",
+                    color: "from-purple-300 to-indigo-300",
                     bgColor: "from-purple-50 to-indigo-50"
                   },
                   {
                     title: "Easy Setup",
                     description: "Fast setup — no tech skills needed",
                     icon: "⚡",
-                    color: "from-blue-500 to-cyan-500",
+                    color: "from-blue-300 to-cyan-300",
                     bgColor: "from-blue-50 to-cyan-50"
                   },
                   {
                     title: "Personalized AI",
                     description: "Customizes to your salon's tone and style",
                     icon: "🎨",
-                    color: "from-green-500 to-emerald-500",
+                    color: "from-green-300 to-emerald-300",
                     bgColor: "from-green-50 to-emerald-50"
                   },
                   {
                     title: "Smart Learning",
                     description: "Aura gets better every day with advanced AI",
                     icon: "🧠",
-                    color: "from-orange-500 to-red-500",
+                    color: "from-orange-300 to-red-300",
                     bgColor: "from-orange-50 to-red-50"
                   },
                   {
                     title: "Expert Support",
                     description: "Real experts (not just AI) when you need them",
                     icon: "🤝",
-                    color: "from-teal-500 to-blue-500",
+                    color: "from-teal-300 to-blue-300",
                     bgColor: "from-teal-50 to-blue-50"
                   },
                   // Duplicate cards for seamless loop
@@ -929,21 +930,21 @@ function App() {
                     title: "Built for Salons",
                     description: "First AI built exclusively for salons (not a generic bot)",
                     icon: "✨",
-                    color: "from-pink-500 to-rose-500",
+                    color: "from-pink-300 to-rose-300",
                     bgColor: "from-pink-50 to-rose-50"
                   },
                   {
                     title: "Industry Expertise",
                     description: "Created by salon owners who understand the industry",
                     icon: "👑",
-                    color: "from-purple-500 to-indigo-500",
+                    color: "from-purple-300 to-indigo-300",
                     bgColor: "from-purple-50 to-indigo-50"
                   },
                   {
                     title: "Easy Setup",
                     description: "Fast setup — no tech skills needed",
                     icon: "⚡",
-                    color: "from-blue-500 to-cyan-500",
+                    color: "from-blue-300 to-cyan-300",
                     bgColor: "from-blue-50 to-cyan-50"
                   }
                 ].map((reason, index) => (
@@ -1105,7 +1106,7 @@ function App() {
                 </p>
               </div>
               
-              <button className="group px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 transform"
+              <button className="group px-10 py-5 bg-purple-600 from-purple-600 to-pink-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105 transform"
               
                 onClick={() => window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07"}
               >
@@ -1147,10 +1148,10 @@ function App() {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
               <div className="space-y-4">
-                <div className="flex items-center space-x-4">
+                {/* <div className="flex items-center space-x-4">
                   <Phone className="w-6 h-6 text-purple-600" />
                   <span className="text-gray-600">+1 (555) 123-4567</span>
-                </div>
+                </div> */}
                 <div className="flex items-center space-x-4">
                   <MessageCircle className="w-6 h-6 text-purple-600" />
                   <span className="text-gray-600">info@aura300.ai</span>
