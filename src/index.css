@@ -11,7 +11,9 @@
   }
 }
 
-
+a:hover {
+  cursor: pointer;
+}
 
 @layer components {
   .btn-primary {
