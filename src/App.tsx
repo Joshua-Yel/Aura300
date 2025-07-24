@@ -10,6 +10,10 @@ import {
   Star,
   Menu,
   X,
+  Clock,
+  Zap,
+  MapPin,
+  Rocket
 } from 'lucide-react'
 
 import glassAsset from "./assets/glass-asset.png"; 
@@ -18,6 +22,10 @@ import emma from "./assets/emma.png";
 import yuki from "./assets/yuki.png";
 import nami from "./assets/nami.png";
 import logodark from "./assets/logo-dark.png";
+
+import { Routes, Route, Link } from 'react-router-dom';
+import PrivacyPolicy from './pages/privacy-policy';
+import TermsConditions from './pages/terms-condition';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -190,6 +198,17 @@ function App() {
   // ]
 
   return (
+
+      <Routes location={location}>
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-condition" element={<TermsConditions />} />
+
+     
+      <Route
+        path="*"
+        element={
+          <>
+
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
@@ -1121,99 +1140,154 @@ function App() {
       </div>
     </section>
 
-      {/* Contact Section */}
-      <section id="Contact" className="py-16 gradient-bg">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Ready to See the Future?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't let another client go unanswered. Let's grow together.
-            </p>
-          </motion.div>
+{/* Contact Section */}
+<section id="Contact" className="py-16 gradient-bg">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Ready to Transform Your Salon?
+      </h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        Join hundreds of successful salons already using Aura 300. Your clients are waiting – let's make sure they never wait too long.
+      </p>
+    </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-              <div className="space-y-4">
-                {/* <div className="flex items-center space-x-4">
-                  <Phone className="w-6 h-6 text-purple-600" />
-                  <span className="text-gray-600">+1 (555) 123-4567</span>
-                </div> */}
-                <div className="flex items-center space-x-4">
-                  <MessageCircle className="w-6 h-6 text-purple-600" />
-                  <span className="text-gray-600">info@aura300.ai</span>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <Users className="w-6 h-6 text-purple-600" />
-                  <span className="text-gray-600">8 The Green, Ste R, Dover, Delaware 19901</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="card p-8"
-            >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Book Your Free Demo</h3>
-              <form className="space-y-4">
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Salon Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    placeholder="Tell us about your salon"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn-primary w-full"
-                
-                  onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07";
-                  }}
-                >
-                  Book Demo
-                </button>
-              </form>
-            </motion.div>
-          </div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      {/* Quick Demo CTA */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="card p-8 text-center group hover:shadow-2xl transition-all duration-300"
+      >
+        <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <Calendar className="w-8 h-8 text-white" />
         </div>
-      </section>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">See It In Action</h3>
+        <p className="text-gray-600 mb-6">
+          Book your personalized 15-minute demo and discover how Aura 300 can revolutionize your salon operations.
+        </p>
+        <button 
+          className="btn-primary w-full group-hover:bg-purple-700 transition-colors duration-300"
+          onClick={() => {
+            window.location.href = "https://calendly.com/aura300-info/30min?month=2025-07";
+          }}
+        >
+          Book Free Demo
+        </button>
+      </motion.div>
+
+      {/* Instant Connection */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="card p-8 text-center group hover:shadow-2xl transition-all duration-300"
+      >
+        <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <MessageCircle className="w-8 h-8 text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Get Instant Answers</h3>
+        <p className="text-gray-600 mb-6">
+          Have questions? Our AI experts are ready to help you understand how Aura 300 fits your unique salon needs.
+        </p>
+        <button 
+          className="btn-primary w-full bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+          onClick={() => {
+            window.location.href = "mailto:info@aura300.ai?subject=Salon Inquiry&body=Hi! I'm interested in learning more about Aura 300 for my salon.";
+          }}
+        >
+          Contact Us Now
+        </button>
+      </motion.div>
+
+      {/* Quick Start Guide */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="card p-8 text-center group hover:shadow-2xl transition-all duration-300"
+      >
+        <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+          <Rocket className="w-8 h-8 text-white" />
+        </div>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Start Immediately</h3>
+        <p className="text-gray-600 mb-6">
+          No complex setup required. Get your AI receptionist answering calls in under 10 minutes with our quick-start guide.
+        </p>
+        <button 
+          className="btn-primary w-full bg-green-600 hover:bg-green-700 transition-colors duration-300"
+          onClick={() => scrollToSection('How it Works')}
+        >
+          Get Quick Start Guide
+        </button>
+      </motion.div>
+    </div>
+
+    {/* Contact Information Strip */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      viewport={{ once: true }}
+      className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg"
+    >
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="flex flex-col items-center space-y-2">
+          <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+            <MessageCircle className="w-5 h-5 text-purple-600" />
+          </div>
+          <h4 className="font-semibold text-gray-900">Email Support</h4>
+          <a 
+            href="mailto:info@aura300.ai" 
+            className="text-purple-600 hover:text-purple-700 transition-colors duration-300"
+          >
+            info@aura300.ai
+          </a>
+        </div>
+        
+        <div className="flex flex-col items-center space-y-2">
+          <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+            <Clock className="w-5 h-5 text-purple-600" />
+          </div>
+          <h4 className="font-semibold text-gray-900">Response Time</h4>
+          <span className="text-gray-600">Usually within 2 hours</span>
+        </div>
+        
+        <div className="flex flex-col items-center space-y-2">
+          <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+            <MapPin className="w-5 h-5 text-purple-600" />
+          </div>
+          <h4 className="font-semibold text-gray-900">Headquarters</h4>
+          <span className="text-gray-600 text-sm">8 The Green, Ste R, Dover, Delaware 19901</span>
+        </div>
+      </div>
+    </motion.div>
+
+    {/* Urgency Banner */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.5 }}
+      viewport={{ once: true }}
+      className="mt-12 text-center"
+    >
+      <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white font-medium shadow-lg">
+        <Zap className="w-5 h-5 mr-2" />
+        Limited Time: Free setup for new clients this month!
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
@@ -1238,14 +1312,18 @@ function App() {
               <ul className="space-y-2 text-gray-400">
                 <li>About</li>
                 <li>Contact</li>
-                <li>Privacy Policy</li>
+                <li><Link to="/privacy-policy" className="hover:underline">
+                      Privacy Policy
+                    </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Support</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>Help Center</li>
-                <li>Terms & Conditions</li>
+                <li><Link to="/terms-condition" className="hover:underline">
+                      Terms & Conditions
+                    </Link></li>
                 <li>Contact Support</li>
               </ul>
             </div>
@@ -1256,7 +1334,12 @@ function App() {
         </div>
       </footer>
     </div>
-  )
+
+    </>
+        }
+        />
+        </Routes>
+  );
 }
 
 export default App
