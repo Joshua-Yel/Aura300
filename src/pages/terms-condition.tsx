@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Scale, FileText, Shield, Users, CreditCard, AlertTriangle, Lock, Gavel, ArrowLeft, ScrollText, Database, Bot } from 'lucide-react';
 
 const TermsConditions = () => {

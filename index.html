@@ -20,30 +20,4 @@
       src="/src/main.tsx"
     ></script>
   </body>
-  <script>
-    if (import.meta.env.DEV) {
-      import('vite/hmr').then((hmr) => hmr.createHotContext(import.meta.url));
-    }
-  </script>
-  <script>
-    if (import.meta.env.PROD) {
-      import('vite/dist/client').then((client) => client.createHotContext(import.meta.url));
-    }
-  </script>
-  <script>
-    if (import.meta.env.SSR) {
-      import('vite/dist/client').then((client) => client.createHotContext(import.meta.url));
-    }
-  </script>
-  <script>
-    if (import.meta.env.SSR) {
-      import('vite/dist/client').then((client) => client.createHotContext(import.meta.url     ));
-    }
-  </script>
-</head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
- 
 </html>

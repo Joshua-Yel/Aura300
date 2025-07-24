@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Shield, Eye, Lock, Users, FileText, Globe, Clock, Mail, ArrowLeft } from 'lucide-react';
 
 const PrivacyPolicy = () => {
